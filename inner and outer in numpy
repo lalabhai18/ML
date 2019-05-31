@@ -1,0 +1,11 @@
+import numpy as np
+a=[]
+b=[]
+a=input().split()
+a=[int(i) for i in a]
+arr1=np.array(a)
+b=input().split()
+b=[int(i) for i in b]
+arr2=np.array(b)
+print(np.inner(arr1,arr2))
+print(np.outer(arr1,arr2))
