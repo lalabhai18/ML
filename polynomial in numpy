@@ -1,0 +1,7 @@
+import numpy as np
+a=[]
+a=input().split()
+a=[float(i) for i in a]
+poly1=np.array(a)
+x=float(input())
+print(np.polyval(poly1,x))
