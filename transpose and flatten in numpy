@@ -1,0 +1,16 @@
+import numpy as np
+n,m=input().split()
+n=int(n)
+m=int(m)
+#print(n)
+#print(m)
+matrix=[]
+row=[]
+for i in range(n):
+    row=input().split()
+    #print(row)
+    row=[int(k) for k in row]
+    matrix.append(row)
+arr1=np.array(matrix).reshape(n,m)
+print(arr1.transpose())
+print(arr1.flatten())
