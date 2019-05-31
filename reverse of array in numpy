@@ -1,0 +1,12 @@
+import numpy
+
+def arrays(arr):
+    arr1=numpy.array(arr,dtype='float')
+    #arr1=arr1.reshape(2,(arr1.size)/2)
+    arr1=arr1[::-1]
+    #arr1=arr1.ravel()
+    return arr1
+
+arr = raw_input().strip().split(' ')
+result = arrays(arr)
+print(result)
