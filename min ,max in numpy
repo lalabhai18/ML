@@ -1,0 +1,16 @@
+import numpy as np
+n,m=input().split()
+n=int(n)
+m=int(m)
+#print(n)
+#print(m)
+matrix=[]
+for i in range(n):
+    row=[]
+    row=input().split()
+    row=[int(i) for i in row]
+    matrix.append(row)
+#print(matrix)
+matrix1=np.min(matrix,axis=1)
+#print(matrix1)
+print(np.max(matrix1))
