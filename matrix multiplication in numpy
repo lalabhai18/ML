@@ -1,0 +1,29 @@
+import numpy as np
+n=int(input())
+#print(n)
+matrix1=[]
+matrix2=[]
+for i in range(n):
+    row=[]
+    row=input().split()
+    row=[int(i) for i in row]
+    matrix1.append(row)
+#print(matrix1) 
+arr1=np.array(matrix1)   
+for i in range(n):
+    row=[]
+    row=input().split()
+    row=[int(i) for i in row]
+    matrix2.append(row)
+#print(matrix2)
+arr2=np.array(matrix2)
+arr3=np.transpose(arr2)
+#print(arr3)
+arr4=[]
+for i in range(n):
+    row=[]
+    for j in range(n):
+        row.append(np.dot(arr1[i],arr3[j]))
+        #print(row)
+    arr4.append(row) 
+print(np.array(arr4))       
