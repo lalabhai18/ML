@@ -1,0 +1,11 @@
+import pandas as pd
+#data={"name":['tom','akshay'],"age":[20,19]}
+my_dict={}
+n=int(input())
+for i in range(n):
+    lst=[]
+    key,*lst=input().split()
+    my_dict[key]=lst
+print(my_dict)    
+df=pd.DataFrame(my_dict)
+print(df)
