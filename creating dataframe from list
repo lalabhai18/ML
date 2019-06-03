@@ -1,0 +1,4 @@
+import pandas as pd
+lst=['geeks','for','geeks']
+df=pd.DataFrame(lst)
+print(df)
