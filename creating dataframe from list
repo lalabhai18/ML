@@ -1,4 +1,6 @@
 import pandas as pd
-lst=['geeks','for','geeks']
+#lst=['geeks','for','geeks']
+lst=[]
+lst=input().split()
 df=pd.DataFrame(lst)
 print(df)
