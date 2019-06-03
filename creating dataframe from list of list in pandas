@@ -1,0 +1,10 @@
+import pandas as pd
+#data=[['tom',10],['nick',11],['juli',12]]
+matrix=[]
+n=int(input())
+for i in range(n):
+    lst=[]
+    lst=input().split()
+    matrix.append(lst)
+df=pd.DataFrame(matrix,columns=['name','age'])
+print(df)
