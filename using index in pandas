@@ -1,0 +1,10 @@
+import pandas as pd
+#data={'name':['tom','jack','nick','juli'],'marks':[99,98,95,90]}
+my_dict={}
+n=int(input())
+for i in range(n):
+    key,*lst=input().split()
+    my_dict[key]=lst
+print(my_dict)
+df=pd.DataFrame(my_dict,index=['rank1','rank2','rank3','rank4'])
+print(df)
