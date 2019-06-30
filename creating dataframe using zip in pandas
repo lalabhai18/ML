@@ -1,8 +1,0 @@
-import pandas as pd
-#name=['tom','krish','nick','juli']
-#age=[25,30,26,22]
-name=list(input().split())
-age=list(map(int,input().split()))
-tup=list(zip(name,age))
-df=pd.DataFrame(tup,columns=['name','age'])
-print(df)
