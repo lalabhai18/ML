@@ -1,7 +1,0 @@
-import pandas as pd
-my_dict={'name':['tom','krish','nick','juli'], 
-               'age':[25,30,26,22]}
-print(my_dict)
-df=pd.DataFrame(my_dict)
-print(df)
-print(df.iloc[1])
