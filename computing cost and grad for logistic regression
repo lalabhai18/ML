@@ -1,0 +1,7 @@
+function [J, grad] = costFunction(theta, X, y)        %compute cost and grad for logistic regression
+m = length(y); % number of training examples
+g=sigmoid(X*(theta));                                 %hypothesis function
+grad = zeros(size(theta));
+J = -[sum((1-y).*log(1-g) + y.*log(g))]/m;            %cost function
+grad = (((g-y)')*X)/m;                                %gradient for logistic regression
+end
