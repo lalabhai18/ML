@@ -1,0 +1,12 @@
+function [error_train, error_val] = learningCurve(X, y, Xval, yval, lambda)     %Generates the train and cross validation set errors
+%   In this function, you will compute the train and test errors for dataset sizes from 1 up to m. 
+m = size(X, 1);  % Number of training examples
+m1 = size(Xval, 1);
+error_train = zeros(m, 1);
+error_val   = zeros(m, 1);
+for i=1:m
+  theta = trainLinearReg(X(1:i,:), y(1:i), lambda);
+  error_train(i)= [sum((X(1:i,:)*theta-y(1:i)).^2)]/(2*i) ;
+  error_val(i)=  [sum((Xval*theta-yval).^2)]/(2*m1) ;
+endfor
+end
