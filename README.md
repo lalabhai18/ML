@@ -6,6 +6,6 @@
  octave with is easier language to start with.If you are newbie than 
  this is the better place to learn how to implement algorithms in coding
  language.There are also some notes on ml that i have made while studing
- ml.
+ ml.I have also added some codes using scikit-learn. 
  
  
