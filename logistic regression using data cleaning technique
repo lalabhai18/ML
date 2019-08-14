@@ -1,0 +1,32 @@
+#importing necessary packages
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+#reading csv files or excel files
+X_train=pd.read_csv('train.csv')
+print(X_train)
+X_test = pd.read_csv('test.csv').fillna(0)
+print(X_test)
+y_train=pd.read_csv('train_labels.csv')
+print(y_train)
+#importing imputer(simple imputer) function which is used to compute mean , median and mode
+from sklearn.preprocessing import Imputer
+imp = Imputer(missing_values=np.nan, strategy='mean')
+X_impute=imp.fit_transform(X_train)
+print(X_impute)
+#splitting data in test and train data i.e 75% train and 25% test but not recommended as data size  is small  
+from sklearn.model_selection import train_test_split
+X_train1,X_train2,y_train1,y_train2=train_test_split(X_impute,y_train,random_state=0)
+from sklearn.linear_model import LogisticRegression
+#We will use all data to train the model as data size is small
+clf=LogisticRegression(C=2,penalty='l1').fit(X_impute,y_train)
+print(clf.score(X_impute,y_train))
+print(clf.score(X_train1,y_train1))
+print(clf.score(X_train2,y_train2))
+print(clf.predict(X_test))
+
+
+output: 0.9482470784641068
+        0.9376391982182628
+        0.98
+        [0 0 0 ... 0 1 0]
