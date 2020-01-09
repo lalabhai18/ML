@@ -7,5 +7,5 @@
  this is the better place to learn how to implement algorithms in coding
  language.There are also some notes on ml that i have made while studing
  ml.I have also added some codes using scikit-learn. 
- Now i will add codes for questions on kaggle and also of project.
+ Now i will add codes for questions on kaggle and also my project.
  
