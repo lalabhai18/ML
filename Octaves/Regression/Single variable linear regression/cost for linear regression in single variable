@@ -1,0 +1,7 @@
+%COMPUTECOST Compute cost for linear regression
+function J = computeCost(X, y, theta)
+m = length(y);      % number of training examples
+J = 0;        %cost function                                
+  h=X*(theta);   %hypothesis function 
+  J=(sum((h-y).^2))/(2*m);
+end
