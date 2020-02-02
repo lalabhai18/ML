@@ -1,5 +1,0 @@
-function J = computeCostMulti(X, y, theta)        %Compute cost for linear regression with multiple variables
-m=length(y);   %no of training example
-h=X*(theta);   %hypothesis function
-J=(sum((h-y).^2))/(2*m);
-end
